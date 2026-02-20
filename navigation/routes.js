@@ -3,6 +3,7 @@ export const AUTH_SCREENS = {
 };
 
 export const APP_SCREENS = {
+  ROOT: 'Root',
   HOME_TAB: 'HomeTab',
   HOME: 'Home',
   CHATS: 'Chats',

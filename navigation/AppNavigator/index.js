@@ -11,6 +11,7 @@ import ProfileScreen from "../../screens/profile/profile";
 import ChatsScreen from "../../screens/chats/chats";
 
 const Tab = createBottomTabNavigator();
+const RootStack = createNativeStackNavigator();
 const HomeStack = createNativeStackNavigator();
 
 function HomeStackNavigator() {
@@ -21,16 +22,11 @@ function HomeStackNavigator() {
         component={HomeScreen}
         options={{ headerShown: false }}
       />
-      <HomeStack.Screen
-        name={APP_SCREENS.CHATS}
-        component={ChatsScreen}
-        options={{ title: "Chats" }}
-      />
     </HomeStack.Navigator>
   );
 }
 
-export default function AppNavigator() {
+function MainTabs() {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -70,5 +66,22 @@ export default function AppNavigator() {
         options={{ title: "Profile" }}
       />
     </Tab.Navigator>
+  );
+}
+
+export default function AppNavigator() {
+  return (
+    <RootStack.Navigator>
+      <RootStack.Screen
+        name={APP_SCREENS.ROOT}
+        component={MainTabs}
+        options={{ headerShown: false }}
+      />
+      <RootStack.Screen
+        name={APP_SCREENS.CHATS}
+        component={ChatsScreen}
+        options={{ title: "Chats" }}
+      />
+    </RootStack.Navigator>
   );
 }
