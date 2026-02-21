@@ -12,12 +12,15 @@ import {
 } from "react-native";
 
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useNavigation } from "@react-navigation/native";
 
 import { useAuth } from "../../navigation/AuthContext";
+import { AUTH_SCREENS } from "../../navigation/routes";
 import { colors } from "../../constants/theme";
 
 export default function LoginScreen() {
   const { login } = useAuth();
+  const navigation = useNavigation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -76,7 +79,12 @@ export default function LoginScreen() {
           <View style={styles.fieldGroup}>
             <View style={styles.passwordLabelRow}>
               <Text style={styles.label}>Password</Text>
-              <Pressable hitSlop={8}>
+              <Pressable
+                hitSlop={8}
+                onPress={() =>
+                  navigation.navigate(AUTH_SCREENS.FORGOT_PASSWORD)
+                }
+              >
                 <Text style={styles.linkText}>Forgot Password?</Text>
               </Pressable>
             </View>

@@ -1,11 +1,45 @@
 import React from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
 
 import { useAuth } from "../../navigation/AuthContext";
 import { APP_SCREENS } from "../../navigation/routes";
 import { colors } from "../../constants/theme";
 
+
+export default function HomeScreen() {
+  const navigation = useNavigation();
+
+  const handleOpenChats = () => {
+    navigation.navigate(APP_SCREENS.CHATS);
+  };
+
+  return (
+    <SafeAreaView style={styles.container} edges={["top", "bottom"]}>
+      <View style={styles.header}>
+        <Text style={styles.title}>Home</Text>
+        <Text style={styles.subtitle}>You&apos;re logged in</Text>
+      </View>
+
+      <View style={styles.content}>
+        <View style={styles.circleGrid}>
+          <Pressable
+            onPress={handleOpenChats}
+            style={styles.circleButton}
+            accessibilityRole="button"
+            accessibilityLabel="Open chats"
+          >
+            <View style={styles.circle}>
+              <Text style={{ color: "#fff", fontWeight: "700" }}>C</Text>
+            </View>
+            <Text style={styles.circleLabel}>Chats</Text>
+          </Pressable>
+        </View>
+      </View>
+    </SafeAreaView>
+  );
+}
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -53,36 +87,3 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
 });
-
-export default function HomeScreen() {
-  const navigation = useNavigation();
-
-  const handleOpenChats = () => {
-    navigation.navigate(APP_SCREENS.CHATS);
-  };
-
-  return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.title}>Home</Text>
-        <Text style={styles.subtitle}>You&apos;re logged in</Text>
-      </View>
-
-      <View style={styles.content}>
-        <View style={styles.circleGrid}>
-          <Pressable
-            onPress={handleOpenChats}
-            style={styles.circleButton}
-            accessibilityRole="button"
-            accessibilityLabel="Open chats"
-          >
-            <View style={styles.circle}>
-              <Text style={{ color: "#fff", fontWeight: "700" }}>C</Text>
-            </View>
-            <Text style={styles.circleLabel}>Chats</Text>
-          </Pressable>
-        </View>
-      </View>
-    </View>
-  );
-}
