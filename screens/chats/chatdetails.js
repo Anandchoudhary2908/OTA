@@ -38,7 +38,7 @@ export default function ChatDetails() {
       <Header
         title={name}
         showBackButton={true}
-        showMenuIcon={true}
+        showMenuIcon={false}
         transparent={false}
         showProfileIcon={true}
       />

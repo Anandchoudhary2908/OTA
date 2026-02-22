@@ -85,7 +85,8 @@ export default function Header({
       </View>
 
       <View style={[styles.rightContainer, rightContainerStyle]}>
-        {showProfileIcon && renderIconButton("user", handleProfilePress, "Profile")}
+        {showProfileIcon &&
+          renderIconButton("user", handleProfilePress, "Profile")}
         {showMenuIcon &&
           renderIconButton("more-vertical", onMenuPress, "More options", {
             marginLeft: showProfileIcon ? 10 : 0,

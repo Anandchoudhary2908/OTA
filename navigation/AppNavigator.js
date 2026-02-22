@@ -6,6 +6,7 @@ import TabNavigator from "./tabnavigator";
 import ChatsScreen from "../screens/chats/chats";
 import ChatDetails from "../screens/chats/chatdetails";
 import NotificationScreen from "../screens/notification/notification";
+import ProfileScreen from "../screens/profile/profile";
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +23,7 @@ export default function AppNavigator() {
         name={APP_SCREENS.CHAT_DETAILS}
         component={ChatDetails}
       />
+      <Stack.Screen name={APP_SCREENS.PROFILE} component={ProfileScreen} />
     </Stack.Navigator>
   );
 }

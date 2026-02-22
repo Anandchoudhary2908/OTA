@@ -5,38 +5,44 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+
+    "updates": {
+      "url": "https://u.expo.dev/ed13860d-dd2f-4b75-9709-30860f717c34",
+      "fallbackToCacheTimeout": 0
+    },
+
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+
     "ios": {
       "supportsTablet": true
     },
+
     "android": {
+      "package": "com.anandchoudhary2908.ota",
+      "edgeToEdgeEnabled": true,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true,
-      "package": "com.anandchoudhary2908.ota"
+      }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
+
     "extra": {
       "eas": {
         "projectId": "ed13860d-dd2f-4b75-9709-30860f717c34"
       }
     },
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
-    "androidStatusBar": {
-      "backgroundColor": "#000000"
-    },
+
     "owner": "anandchoudhary2908o"
   }
 }
