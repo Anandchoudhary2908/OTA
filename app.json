@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
@@ -20,10 +20,23 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.anandchoudhary2908.ota"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ed13860d-dd2f-4b75-9709-30860f717c34"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "androidStatusBar": {
+      "backgroundColor": "#000000"
+    },
+    "owner": "anandchoudhary2908o"
   }
 }
