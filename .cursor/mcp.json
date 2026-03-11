@@ -1,0 +1,48 @@
+{
+    "mcpServers": {
+        "expo": {
+            "command": "npx",
+            "args": [
+                "expo-mcp-server"
+            ]
+        },
+        "node": {
+            "command": "npx",
+            "args": [
+                "@modelcontextprotocol/server-node"
+            ]
+        },
+        "filesystem": {
+            "command": "npx",
+            "args": [
+                "@modelcontextprotocol/server-filesystem",
+                "."
+            ]
+        },
+        "android": {
+            "command": "bash",
+            "args": [
+                "-c",
+                "echo Android MCP Ready"
+            ]
+        },
+        "shell": {
+            "command": "npx",
+            "args": [
+                "@modelcontextprotocol/server-shell"
+            ]
+        },
+        "react-native-tools": {
+            "command": "node",
+            "args": [
+                ".cursor/mcp/tools.js"
+            ]
+        },
+        "dependency-tools": {
+            "command": "node",
+            "args": [
+                ".cursor/mcp/dependency-tools.js"
+            ]
+        }
+    }
+}

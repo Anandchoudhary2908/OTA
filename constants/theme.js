@@ -12,8 +12,8 @@ export const colors = {
   /**
    * Neutrals and text colors to keep styling consistent.
    */
-  background: "#F9FAFB",
-  cardBackground: "#FFFFFF",
+  background: "#F1F1F1",
+  cardBackground: "#F1F1F1",
   textPrimary: "#111827",
   textSecondary: "#6B7280",
   border: "#E5E7EB",

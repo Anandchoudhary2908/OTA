@@ -1,16 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
 
+import { useAutoUpdate } from './hooks/useAutoUpdate';
 import NavigationRoot from './navigation';
-import { checkForOTAUpdate } from './updateService';
 
 export default function App() {
-  useEffect(() => {
-    checkForOTAUpdate();
-  }, []);
+  useAutoUpdate();
   return (
     <>
-      <StatusBar style="auto" />
+      <StatusBar  />
       <NavigationRoot />
     </>
   );

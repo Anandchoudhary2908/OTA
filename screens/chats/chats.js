@@ -14,6 +14,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import { APP_SCREENS } from "../../navigation/routes";
 import { colors } from "../../constants/theme";
+import Header from "../../components/header";
 
 const SAMPLE_CHATS = [
   { id: "1", name: "Alex Johnson", lastMessage: "See you tomorrow!", time: "2m", unread: 2 },
@@ -119,6 +120,7 @@ export default function ChatsScreen() {
 
   return (
     <SafeAreaView style={styles.container} edges={["top"]}>
+      <Header title="Chats" />
       <FlatList
         data={SAMPLE_CHATS}
         keyExtractor={keyExtractor}

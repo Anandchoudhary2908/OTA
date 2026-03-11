@@ -7,7 +7,6 @@ import { useAuth } from "../../navigation/AuthContext";
 import { APP_SCREENS } from "../../navigation/routes";
 import { colors } from "../../constants/theme";
 
-
 export default function HomeScreen() {
   const navigation = useNavigation();
 
@@ -21,7 +20,7 @@ export default function HomeScreen() {
         <Text style={styles.title}>Home</Text>
         <Text style={styles.subtitle}>You&apos;re logged in</Text>
       </View>
-
+      <Text>hii</Text>
       <View style={styles.content}>
         <View style={styles.circleGrid}>
           <Pressable
@@ -33,10 +32,11 @@ export default function HomeScreen() {
             <View style={styles.circle}>
               <Text style={{ color: "#fff", fontWeight: "700" }}>C</Text>
             </View>
-            <Text style={styles.circleLabel}>Chats</Text>
+            <Text style={styles.circleLabel}>Chat</Text>
           </Pressable>
         </View>
       </View>
+    
     </SafeAreaView>
   );
 }
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 24,
-    backgroundColor: colors.background,
+    // backgroundColor: colors.background,
   },
   header: {
     marginBottom: 24,

@@ -6,6 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 import { useAuth } from "../../navigation/AuthContext";
 import { APP_SCREENS } from "../../navigation/routes";
 import { colors } from "../../constants/theme";
+import UpdateButton from "../../components/UpdateButton";
 
 export default function ProfileScreen() {
   const navigation = useNavigation();
@@ -26,6 +27,7 @@ export default function ProfileScreen() {
           <Text style={styles.notificationButtonLabel}>Notification</Text>
         </Pressable>
       </View>
+      <UpdateButton/>
 
       <Pressable
         onPress={logout}
